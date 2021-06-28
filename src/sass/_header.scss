@@ -1,0 +1,81 @@
+$fontSize: 30px;
+
+#header{
+    width: 100%;
+    height: 720px;
+    background-image: url(../photo/headerbackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+#headertext{
+    z-index: 1;
+    color: white;
+    font-size: $fontSize;
+    border: 2px solid white;
+    padding: 15px 40px;
+    transition: all 0.5s;
+    &:hover{
+        transform: scale(1.3);
+    }
+}
+#headermyskills{
+    color: white;
+    z-index: 1;
+    font-size: $fontSize;
+    margin-top: $fontSize;
+}
+#buttons{
+    z-index: 1;
+    margin-top: $fontSize;
+
+}
+.button{
+    text-decoration: none;
+    color: white;
+    font-size: $fontSize;
+    padding: 15px 70px;
+    margin-left: $fontSize;
+}
+#green{
+    background-color:darken($color: lime, $amount: 7%);
+    border-radius: $fontSize - 20;
+    box-shadow: 0 0 10px lime;
+    transition: box-shadow 1s;
+    &:hover{
+        box-shadow: none;
+    }
+}
+
+#blue{
+    background-color: darken($color:blue, $amount: 10%);
+    border-radius: $fontSize - 20;
+    box-shadow: 0 0 10px blue;
+    transition: box-shadow 1s;
+    &:hover{
+        box-shadow: none;
+    }
+}
+#orange{
+    background-color: orange;
+    border-radius: $fontSize - 20;
+    box-shadow: 0 0 10px orange;
+    transition: box-shadow 1s;
+    &:hover{
+        box-shadow: none;
+    }
+}
+@media (max-width: 750px){
+    #buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    .button{
+        margin-top: 30px;
+    }
+}

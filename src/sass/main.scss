@@ -1,0 +1,107 @@
+@font-face
+{
+    font-family: 'Montserat';
+    src: url(../font/Montserrat-Regular.ttf)
+}
+@import "header";
+@import "section";
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserat";
+}
+#gridblocks{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+#maingrid{
+    margin-top: 100px;
+}
+.divgrid{
+    min-height: 25vh;
+    padding: 50px;
+    background-color: orchid;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition: all 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    &:hover{
+        opacity: 40%;
+        min-height: 30vh;
+    }
+}
+#grid1, #grid4{
+    grid-column: 1/3;
+}
+#grid2, #grid5, #grid7, #grid8{
+    grid-column: 3/5;
+}
+#grid3{
+    grid-column: 1/5;
+}
+#grid6{
+    grid-row: 4/6;
+    grid-column: 1/3;
+}
+#grid1{
+    background-image: url(../photo/main/grid1.jpg);
+}
+#grid2{
+    background-image: url(../photo/main/grid2.jpg);
+}
+#grid3{
+    background-image: url(https://png.pngtree.com/png-clipart/20200701/original/pngtree-children-programming-vector-screen-png-image_5399546.jpg);
+}
+#grid4{
+    background-image: url(https://png.pngtree.com/png-clipart/20190611/original/pngtree-vector-computer-programming-material-png-image_2454502.jpg);
+}
+#grid5{
+    background-image: url(https://png.pngtree.com/png-clipart/20200701/original/pngtree-hand-drawn-cartoon-computer-video-conference-illustration-png-image_5364437.jpg);
+
+}
+#grid6{
+    background-image: url(https://png.pngtree.com/png-clipart/20200701/original/pngtree-hacker-coding-with-a-keyboard-and-a-binary-background-color-illustration-png-image_5426760.jpg);
+}
+#grid7{
+    background-image: url(https://image.freepik.com/free-vector/cross-platform-frameworks-abstract-concept-illustration_335657-1825.jpg);
+}
+#grid8{
+    background-image: url(https://image.freepik.com/free-vector/programmer-doing-his-job-flat-design_52683-14150.jpg);
+}
+@import "sectionblog";
+@import "footer";
+@media (max-width: 970px){
+    #gridblocks{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #grid1, #grid3, #grid5, #grid7{
+        grid-column: 1;
+    }
+    #grid2, #grid4, #grid6, #grid8{
+        grid-column: 2;
+    }
+    #grid6{
+        grid-row: 3;
+    }
+}
+@media (max-width: 750px){
+    #gridblocks{
+        grid-template-columns: none;
+    }
+    #grid1, #grid3, #grid5, #grid7{
+        grid-column: 1;
+    }
+    #grid2, #grid4, #grid6, #grid8{
+        grid-column: 1;
+    }
+    #grid6{
+        grid-row: 1;
+    }
+}
